@@ -4,12 +4,12 @@ from PIL import Image, ImageOps
 from multiprocessing import Process, Queue, cpu_count
 
 # you can turn on this code if get bug when the image size is too big
-#Image.MAX_IMAGE_PIXELS = None
+Image.MAX_IMAGE_PIXELS = None
 
 # Change these 3 config parameters to suit your needs...
 TILE_SIZE      = 200		# height/width of mosaic tiles in pixels
-TILE_MATCH_RES = 3		# tile matching resolution (higher values give better fit but require more processing)
-ENLARGEMENT    = 4		# the mosaic image will be this many times wider and taller than the original
+TILE_MATCH_RES = 6      	# tile matching resolution (higher values give better fit but require more processing)
+ENLARGEMENT    = 50			# the mosaic image will be this many times wider and taller than the original
 
 TILE_BLOCK_SIZE = TILE_SIZE / max(min(TILE_MATCH_RES, TILE_SIZE), 1)
 WORKER_COUNT = max(cpu_count() - 1, 1)

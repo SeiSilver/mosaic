@@ -23,7 +23,7 @@ python ./scripts/mosaic.py [location-of-image-want-to-created] [location-of-sub-
 **Example**
 
 ```
-python ./scripts/mosaic.py ./data/suisei.jpg ./data/hololive
+python ./scripts/mosaic.py ./data/origin.jpg ./data/hololive
 ```
 
 **Large Image Fix**
